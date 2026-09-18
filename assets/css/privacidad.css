@@ -1,0 +1,251 @@
+/* Legal document: readable text and navigation within the existing brand. */
+.privacy-main {
+  padding: 140px 0 90px;
+}
+
+.privacy-heading {
+  max-width: 880px;
+  padding-bottom: 42px;
+}
+
+.privacy-back,
+.privacy-content a,
+.privacy-help a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.privacy-eyebrow {
+  margin-top: 34px;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.privacy-heading h1 {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  margin-bottom: 22px;
+}
+
+.privacy-intro {
+  max-width: 700px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.privacy-date {
+  margin-top: 22px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+  border-top: 1px solid var(--border-light);
+  padding-top: 42px;
+}
+
+.privacy-sidebar {
+  position: sticky;
+  top: 110px;
+}
+
+.privacy-index h2 {
+  color: var(--color-primary);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.privacy-index ol {
+  list-style: decimal-leading-zero;
+  padding-left: 28px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.privacy-index a {
+  display: block;
+  padding: 6px 0 6px 5px;
+  color: var(--text-main);
+}
+
+.privacy-index a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.privacy-help {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 2px solid var(--color-secondary);
+  font-size: 0.875rem;
+}
+
+.privacy-help p {
+  margin-bottom: 8px;
+}
+
+.privacy-content section {
+  scroll-margin-top: 115px;
+  padding-bottom: 34px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid var(--color-steel);
+}
+
+.privacy-content section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.privacy-content h2 {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.privacy-content h2 span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.privacy-content p,
+.privacy-content li,
+.privacy-content dd {
+  line-height: 1.85;
+}
+
+.privacy-content p + p,
+.privacy-content ul,
+.privacy-content ol,
+.privacy-content dl {
+  margin-top: 16px;
+}
+
+.privacy-content ul,
+.privacy-content ol {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.privacy-content ul {
+  list-style: disc;
+}
+
+.privacy-content li + li {
+  margin-top: 12px;
+}
+
+.privacy-contact {
+  margin: 22px 0;
+  padding: 24px;
+  background: var(--bg-steel-light);
+  border-left: 3px solid var(--color-secondary);
+  font-style: normal;
+}
+
+.privacy-contact p + p {
+  margin-top: 8px;
+}
+
+.privacy-purposes dt {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.privacy-purposes dd {
+  margin: 0 0 22px;
+}
+
+.privacy-page a:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
+.privacy-skip {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  background: white;
+  color: var(--color-primary);
+  padding: 14px 20px;
+}
+
+.privacy-skip:focus {
+  top: 16px;
+}
+
+@media (max-width: 900px) {
+  .privacy-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .privacy-sidebar {
+    position: static;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .privacy-index ol {
+    columns: 2;
+    column-gap: 36px;
+  }
+
+  .privacy-index li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 540px) {
+  .privacy-main {
+    padding: 115px 0 60px;
+  }
+
+  .privacy-index ol {
+    columns: 1;
+  }
+
+  .privacy-contact {
+    padding: 18px;
+  }
+}
+
+@media print {
+  .privacy-page .header,
+  .privacy-sidebar,
+  .privacy-back,
+  .privacy-skip,
+  .privacy-page .whatsapp-float,
+  .privacy-page .footer {
+    display: none;
+  }
+
+  .privacy-main {
+    padding: 0;
+  }
+
+  .privacy-layout {
+    display: block;
+  }
+
+  .privacy-content h2 {
+    break-after: avoid;
+  }
+}

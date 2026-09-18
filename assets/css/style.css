@@ -760,6 +760,27 @@ h4 {
   color: var(--color-secondary);
 }
 
+.footer-legal {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.footer-legal a {
+  display: inline-block;
+  padding: 8px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-legal a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.footer-legal a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
